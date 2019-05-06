@@ -34,7 +34,8 @@ ActiveRecord::Schema.define(version: 2019_05_06_130507) do
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "admin_id"
+    t.bigint "admin_id"
+    t.index ["admin_id"], name: "index_events_on_admin_id"
   end
 
   create_table "users", force: :cascade do |t|
