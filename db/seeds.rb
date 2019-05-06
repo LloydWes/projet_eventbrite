@@ -24,7 +24,7 @@ end
 puts "done"
 puts "Creating events"
 10.times do
-  Event.create!(admin: User.all.sample, 
+  Event.create!(admin_id: User.all.sample.id, 
                 start_date: Faker::Date.between(Date.today, 2.months.from_now), 
                 duration: rand(30..150), title: Faker::Lorem.sentence, 
                 description: Faker::Lorem.paragraph, 

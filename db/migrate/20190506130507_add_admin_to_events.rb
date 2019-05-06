@@ -3,7 +3,7 @@ class AddAdminToEvents < ActiveRecord::Migration[5.2]
 
     
     # add_column :events, :admin_id, :integer
-    add_reference :events, :admin, class_name: 'User'
+    add_reference :events, :admin#, class_name: 'User'
 
     
     # add_foreign_key :events, :admin, class_name: 'User'
